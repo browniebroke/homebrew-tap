@@ -3,8 +3,8 @@ class StsmfaCli < Formula
 
   desc "A small CLI to help with creating AWS profile for MFA protected sessions."
   homepage "https://github.com/browniebroke/stsmfa-cli"
-  url "https://files.pythonhosted.org/packages/cc/ba/4fc01e0ce5aa3bfa313f6269bd33db8027218dddb78164667aa987660ec4/stsmfa_cli-0.1.0.tar.gz"
-  sha256 "2f01e1c063ac8252cb6df2d1a26188e0bd129133d1e353ff583df46a1af6b4fc"
+  url "https://files.pythonhosted.org/packages/09/1b/2a5a365a3d73d3b1118e0dd6c8d54fccaf4a77deb5e211af13403ded7ca4/stsmfa_cli-0.1.1.tar.gz"
+  sha256 "3bcfbe5622910ae0b69c0a23dbb7ca99d8c56708e12e7a198e3e434545728344"
 
   depends_on "python3"
 
