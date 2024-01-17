@@ -1,0 +1,30 @@
+name: Update formulas
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    name: Update ${{ matrix.formula.name }}
+    strategy:
+      matrix:
+          formula:
+            - name: stsmfa-cli
+              description: A small CLI to help with creating AWS profile for MFA protected sessions.
+              test: A small CLI to help with creating AWS profile for MFA protected sessions.
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install homebrew-pypi-poet ${{ matrix.formula.name }}
+          poet -f ${{ matrix.formula.name }} \
+          | sed 's@Shiny new formula@${{ matrix.formula.description }}@g' \
+          | sed 's@    false@    ${{ matrix.formula.test }}@g' \
+          > Formula/${{ matrix.formula.name }}.rb
+      - run: cat Formula/${{ matrix.formula.name }}.rb
