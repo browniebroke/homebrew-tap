@@ -13,7 +13,7 @@ jobs:
           formula:
             - name: stsmfa-cli
               description: A small CLI to help with creating AWS profile for MFA protected sessions.
-              test: A small CLI to help with creating AWS profile for MFA protected sessions.
+              test: 'assert_match "Usage:", shell_output("#{bin}/stsmfa --help")'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
