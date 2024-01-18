@@ -6,14 +6,17 @@ on:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
-    name: Update ${{ matrix.formula.name }}
     strategy:
       matrix:
           formula:
             - name: stsmfa-cli
               description: A small CLI to help with creating AWS profile for MFA protected sessions.
               test: 'assert_match "Usage:", shell_output("#{bin}/stsmfa --help")'
+    permissions:
+      contents: write # for peter-evans/create-pull-request to create branch
+      pull-requests: write # for peter-evans/create-pull-request to create a PR
+    runs-on: ubuntu-latest
+    name: Update ${{ matrix.formula.name }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,3 +31,9 @@ jobs:
           | sed 's@    false@    ${{ matrix.formula.test }}@g' \
           > Formula/${{ matrix.formula.name }}.rb
       - run: cat Formula/${{ matrix.formula.name }}.rb
+      - uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update/pre-commit-hooks
+          title: Auto-update pre-commit hooks
+          commit-message: Auto-update pre-commit hooks
