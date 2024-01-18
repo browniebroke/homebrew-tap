@@ -1,0 +1,43 @@
+name: Update formulas
+
+on:
+  # on demand
+  workflow_dispatch:
+  # on schedule
+  schedule:
+    # Every monday at 6am
+    - cron: '0 6 * * 1'
+
+jobs:
+  update:
+    strategy:
+      matrix:
+          formula:
+            - name: stsmfa-cli
+              description: A small CLI to help with creating AWS profile for MFA protected sessions.
+              test: 'assert_match "Usage:", shell_output("#{bin}/stsmfa --help")'
+    permissions:
+      contents: write # for peter-evans/create-pull-request to create branch
+      pull-requests: write # for peter-evans/create-pull-request to create a PR
+    runs-on: ubuntu-latest
+    name: Update ${{ matrix.formula.name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install homebrew-pypi-poet ${{ matrix.formula.name }}
+          poet -f ${{ matrix.formula.name }} \
+          | sed 's@Shiny new formula@${{ matrix.formula.description }}@g' \
+          | sed 's@    false@    ${{ matrix.formula.test }}@g' \
+          > Formula/${{ matrix.formula.name }}.rb
+      - run: cat Formula/${{ matrix.formula.name }}.rb
+      - uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update/formula/${{ matrix.formula.name }}
+          title: Update formula ${{ matrix.formula.name }}
+          commit-message: Update formula ${{ matrix.formula.name }}
