@@ -1,8 +1,12 @@
 name: Update formulas
 
 on:
+  # on demand
   workflow_dispatch:
-  push:
+  # on schedule
+  schedule:
+    # Every monday at 6am
+    - cron: '0 6 * * 1'
 
 jobs:
   update:
@@ -34,6 +38,6 @@ jobs:
       - uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update/pre-commit-hooks
-          title: Auto-update pre-commit hooks
-          commit-message: Auto-update pre-commit hooks
+          branch: update/formula/${{ matrix.formula.name }}
+          title: Update formula ${{ matrix.formula.name }}
+          commit-message: Update formula ${{ matrix.formula.name }}
