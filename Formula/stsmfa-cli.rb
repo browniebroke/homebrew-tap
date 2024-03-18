@@ -9,13 +9,13 @@ class StsmfaCli < Formula
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/c0/ff/2266dc472337449827b5ccb522aeb110e5324918d097f20bdd0604bc239f/boto3-1.34.59.tar.gz"
-    sha256 "162edf182e53c198137a28432a626dba103f787a8f5000ed4758b73ccd203fa0"
+    url "https://files.pythonhosted.org/packages/56/6a/be50db7805679f79de57f3b4228e762f8028c2d3a9789ce65c2260ed85c3/boto3-1.34.64.tar.gz"
+    sha256 "e5d681f443645e6953ed0727bf756bf16d85efefcb69cf051d04a070ce65e545"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/7d/80/8d4a0d641955c63e6889ba4563703a8cd8f5cc409d75dfb0b0afd6773651/botocore-1.34.59.tar.gz"
-    sha256 "24edb4d21d7c97dea0c6c4a80d36b3809b1443a30b0bd5e317d6c319dfac823f"
+    url "https://files.pythonhosted.org/packages/35/6e/9c59955f5e73e69729216f7ae76eb6843ce78da65d184d161eeb0f481a3a/botocore-1.34.64.tar.gz"
+    sha256 "084f8c45216d62dc1add2350e236a2d5283526aacd0681e9818b37a6a5e5438b"
   end
 
   resource "click" do
@@ -54,8 +54,8 @@ class StsmfaCli < Formula
   end
 
   resource "s3transfer" do
-    url "https://files.pythonhosted.org/packages/a0/b5/4c570b08cb85fdcc65037b5229e00412583bb38d974efecb7ec3495f40ba/s3transfer-0.10.0.tar.gz"
-    sha256 "d0c8bbf672d5eebbe4e57945e23b972d963f07d82f661cabf678a5c88831595b"
+    url "https://files.pythonhosted.org/packages/83/bc/fb0c1f76517e3380eb142af8a9d6b969c150cfca1324cea7d965d8c66571/s3transfer-0.10.1.tar.gz"
+    sha256 "5683916b4c724f799e600f41dd9e10a9ff19871bf87623cc8f491cb4f5fa0a19"
   end
 
   resource "six" do
@@ -74,8 +74,8 @@ class StsmfaCli < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/af/47/b215df9f71b4fdba1025fc05a77db2ad243fa0926755a52c5e71659f4e3c/urllib3-2.0.7.tar.gz"
-    sha256 "c97dfde1f7bd43a71c8d2a58e369e9b2bf692d1334ea9f9cae55add7d0dd0f84"
+    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
+    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
   def install
