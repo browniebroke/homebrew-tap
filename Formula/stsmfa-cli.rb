@@ -3,19 +3,19 @@ class StsmfaCli < Formula
 
   desc "A small CLI to help with creating AWS profile for MFA protected sessions."
   homepage "https://github.com/browniebroke/stsmfa-cli"
-  url "https://files.pythonhosted.org/packages/6b/4a/14caec00da3b32053fa1677c14e91e8d537ba7e71996e50cc4c919972698/stsmfa_cli-1.1.5.tar.gz"
-  sha256 "54357de08018510cf5efc058c399b782a482d7aaa76c65d12e8760a24676e70b"
+  url "https://files.pythonhosted.org/packages/17/64/793a8cb41b31eecc6d2d9578879bca50fccad63dfffc41d08736e4ff79c8/stsmfa_cli-1.1.8.tar.gz"
+  sha256 "04ace5f3505df20c3c37fe4ac2cfb414cdde49c96119c3145cca6cd446d50996"
 
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/76/27/fd0b2f0218413aaf346959384ad756350c114c95715e505984cf8b4d1c95/boto3-1.34.69.tar.gz"
-    sha256 "898a5fed26b1351352703421d1a8b886ef2a74be6c97d5ecc92432ae01fda203"
+    url "https://files.pythonhosted.org/packages/91/99/7dbca7a34850d7457e1009df53f477ecf9901c93301b2a97201a21800e74/boto3-1.34.74.tar.gz"
+    sha256 "b703e22775561a748adc4576c30424b81abd2a00d3c6fb28eec2e5cde92c1eed"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/f7/38/493fd3057469208f350f82423da8dcf0fd2698fa4563169dd209b6952567/botocore-1.34.69.tar.gz"
-    sha256 "d1ab2bff3c2fd51719c2021d9fa2f30fbb9ed0a308f69e9a774ac92c8091380a"
+    url "https://files.pythonhosted.org/packages/08/0c/9e206f1568b8fc7ad6b5ebc2442d0c39ed80a19f7f297461260353019e66/botocore-1.34.74.tar.gz"
+    sha256 "32bb519bae62483893330c18a0ea4fd09d1ffa32bc573cd8559c2d9a08fb8c5c"
   end
 
   resource "click" do
@@ -58,14 +58,29 @@ class StsmfaCli < Formula
     sha256 "5683916b4c724f799e600f41dd9e10a9ff19871bf87623cc8f491cb4f5fa0a19"
   end
 
+  resource "shellingham" do
+    url "https://files.pythonhosted.org/packages/58/15/8b3609fd3830ef7b27b655beb4b4e9c62313a4e8da8c676e142cc210d58e/shellingham-1.5.4.tar.gz"
+    sha256 "8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de"
+  end
+
   resource "six" do
     url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
     sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/8d/1b/b54d2c7488783b7fb11ae5e509646d19e3aaadda941503bce55c68f2abca/typer-0.10.0.tar.gz"
-    sha256 "597f974754520b091665f993f88abdd088bb81c56b3042225434ced0b50a788b"
+    url "https://files.pythonhosted.org/packages/d0/3e/2b3a69a50fa8237e6c9c76ff08eeffcf7caad7e24e01d3762780544d8f9b/typer-0.12.0.tar.gz"
+    sha256 "900fe786ce2d0ea44653d3c8ee4594a22a496a3104370ded770c992c5e3c542d"
+  end
+
+  resource "typer-cli" do
+    url "https://files.pythonhosted.org/packages/1f/f8/510dee64719ca34a91b3c33a2dac6bb53174885b3692ca7f08ea978a8ab3/typer_cli-0.12.0.tar.gz"
+    sha256 "603ed3d5a278827bd497e4dc73a39bb714b230371c8724090b0de2abdcdd9f6e"
+  end
+
+  resource "typer-slim" do
+    url "https://files.pythonhosted.org/packages/6a/25/b1f3b40acca4a9a263f37fa7f30a6d83b33d9b6182352e1e59e0898c664d/typer_slim-0.12.0.tar.gz"
+    sha256 "3e8a3f17286b173d76dca0fd4e02651c9a2ce1467b3754876b1ac4bd72572beb"
   end
 
   resource "typing-extensions" do
