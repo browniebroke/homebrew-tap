@@ -9,13 +9,13 @@ class StsmfaCli < Formula
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/8b/0f/9b198f573c633c728628b9d9d37b261eab1af50e712dbaa9e7d6799d7172/boto3-1.34.88.tar.gz"
-    sha256 "168894499578a9d69d6f7deb5811952bf4171c51b95749a9aef32cf67bc71f87"
+    url "https://files.pythonhosted.org/packages/fa/34/5f96d157ac90e62897a6652cec479a6df4aa0bd112d1d8a54c7874ba1c0c/boto3-1.34.93.tar.gz"
+    sha256 "e39516e4ca21612932599819662759c04485d53ca457996a913163da11f052a4"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/87/a4/2f1932ef12731b6bed3d2119a3ac70f95b7f82c807b4334dc4abcdff44bc/botocore-1.34.88.tar.gz"
-    sha256 "36f2e9e8dfa856e55dbbe703aea601f134db3fddc3615f1020a755b27fd26a5e"
+    url "https://files.pythonhosted.org/packages/75/1e/dc38c0eb915ce522f054f4f34d4ebe453cf83e761b1dd05836e49c41c056/botocore-1.34.93.tar.gz"
+    sha256 "79d39b0b87e962991c6dd55e78ce15155099f6fb741be88b1b8a456a702cc150"
   end
 
   resource "click" do
