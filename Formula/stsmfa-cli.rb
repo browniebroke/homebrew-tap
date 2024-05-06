@@ -9,13 +9,13 @@ class StsmfaCli < Formula
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/fa/34/5f96d157ac90e62897a6652cec479a6df4aa0bd112d1d8a54c7874ba1c0c/boto3-1.34.93.tar.gz"
-    sha256 "e39516e4ca21612932599819662759c04485d53ca457996a913163da11f052a4"
+    url "https://files.pythonhosted.org/packages/88/2c/6b300b70a06f67e27939ae1cb01d8c04810ef4a28b38d56998d2baa42d37/boto3-1.34.98.tar.gz"
+    sha256 "28c10956033fa79e64529f48c3b62db86d5e4b77024a7343764b6bde6b553543"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/75/1e/dc38c0eb915ce522f054f4f34d4ebe453cf83e761b1dd05836e49c41c056/botocore-1.34.93.tar.gz"
-    sha256 "79d39b0b87e962991c6dd55e78ce15155099f6fb741be88b1b8a456a702cc150"
+    url "https://files.pythonhosted.org/packages/fb/61/86e8fbbefd31efc1ab4c64ae8e32b427ba178f1189d5ff90764cb0de2a76/botocore-1.34.98.tar.gz"
+    sha256 "4cee65df02f4b0be08ad1401965cc89efafebc50ef0727d2d17083c7f1ed2831"
   end
 
   resource "click" do
@@ -39,8 +39,8 @@ class StsmfaCli < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
-    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+    url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
+    sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
   end
 
   resource "python-dateutil" do
