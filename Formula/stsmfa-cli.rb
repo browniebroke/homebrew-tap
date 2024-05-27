@@ -9,13 +9,13 @@ class StsmfaCli < Formula
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/43/4b/916eb883caf1a01bd98b1c67309df1f261ac75c895efb7d24867fc7db26b/boto3-1.34.108.tar.gz"
-    sha256 "677723295151d29ff9b363598a20c1997c4e2af7e50669d9e428b757fe586a10"
+    url "https://files.pythonhosted.org/packages/30/3b/5b35372d4042a85547f60f7575a4548a5adc6ff20fe401ae7161c9f722e6/boto3-1.34.113.tar.gz"
+    sha256 "009cd143509f2ff4c37582c3f45d50f28c95eed68e8a5c36641206bdb597a9ea"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/65/f4/ca86a8ce8946f2a51f7bd5ae06433bfd576e449031f1a40d783b374463b3/botocore-1.34.108.tar.gz"
-    sha256 "384c9408c447631475dc41fdc9bf2e0f30c29c420d96bfe8b468bdc2bace3e13"
+    url "https://files.pythonhosted.org/packages/b5/74/82930aa230fb594f265138909611dc5ab70f3a5116e544afb2f4160756c4/botocore-1.34.113.tar.gz"
+    sha256 "449912ba3c4ded64f21d09d428146dd9c05337b2a112e15511bf2c4888faae79"
   end
 
   resource "click" do
@@ -74,8 +74,8 @@ class StsmfaCli < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
-    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
+    url "https://files.pythonhosted.org/packages/ce/6a/aa0a40b0889ec2eb81a02ee0daa6a34c6697a605cf62e6e857eead9e4f85/typing_extensions-4.12.0.tar.gz"
+    sha256 "8cbcdc8606ebcb0d95453ad7dc5065e6237b6aa230a31e81d0f440c30fed5fd8"
   end
 
   resource "urllib3" do
