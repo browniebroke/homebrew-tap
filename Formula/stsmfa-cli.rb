@@ -3,19 +3,19 @@ class StsmfaCli < Formula
 
   desc "A small CLI to help with creating AWS profile for MFA protected sessions."
   homepage "https://github.com/browniebroke/stsmfa-cli"
-  url "https://files.pythonhosted.org/packages/b3/91/dbf0b7bde4ed8415a62b04f10629197c5778ccc776787e3a578b61f1736f/stsmfa_cli-1.2.0.tar.gz"
-  sha256 "04edcc2b2285a1f22bdfb6c418462d66501752a9ce0439098cec3f26bbdfc318"
+  url "https://files.pythonhosted.org/packages/82/e3/aa542e3b07bf873117e9512f59ec2ba36937ee2782ae4c06c2164e621a32/stsmfa_cli-1.3.0.tar.gz"
+  sha256 "755710dfe370f58c1b05b61d339401f3cf6b202e1e2dba0849327a43fe85c652"
 
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/56/d1/80ff549c607b2cba2fbde3fbc0a5799a52b2b4f0dd32a91e24d29dbff696/boto3-1.34.155.tar.gz"
-    sha256 "e8d2e128c74e84199edccdc3a6b4b1c6fb36d6fdb5688eb92931827f02c6fa5b"
+    url "https://files.pythonhosted.org/packages/33/ee/df4ec3cb6f292cfcc665562fbafafb68a6fe525c5a6476ab48a92b5ab669/boto3-1.34.158.tar.gz"
+    sha256 "5b7b2ce0ec1e498933f600d29f3e1c641f8c44dd7e468c26795359d23d81fa39"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/13/11/8a69273db5c68a1ee5a992b7816d3d66acdb3726c9bf7c0b28d2764ccf2e/botocore-1.34.155.tar.gz"
-    sha256 "3aa88abfef23909f68d3e6679a3d4b4bb3c6288a6cfbf9e253aa68dac8edad64"
+    url "https://files.pythonhosted.org/packages/dc/14/77b36078a68e756ffc05c0101a0eb4039430fda00f5aa601a6340f7a9fb6/botocore-1.34.158.tar.gz"
+    sha256 "5934082e25ad726673afbf466092fb1223dafa250e6e756c819430ba6b1b3da5"
   end
 
   resource "click" do
