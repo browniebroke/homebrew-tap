@@ -3,19 +3,19 @@ class StsmfaCli < Formula
 
   desc "A small CLI to help with creating AWS profile for MFA protected sessions."
   homepage "https://github.com/browniebroke/stsmfa-cli"
-  url "https://files.pythonhosted.org/packages/9a/ff/5924e13504e5875894c5fe1dc6e2ecb0617b48ba1b6e2e9b389eb7131ae5/stsmfa_cli-1.3.7.tar.gz"
-  sha256 "4c2010a90c917a016a576bad24a0358f498cec3aa7030d94a3c6def048dde5d5"
+  url "https://files.pythonhosted.org/packages/3e/09/dd0c248133feaf251992c55b3f122d1303f1435f72604fd48c124792835b/stsmfa_cli-1.4.1.tar.gz"
+  sha256 "0ca7ed2a68e2a07b849844b764ffc247a702a759391f9334a729f4ca7ffa0577"
 
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/73/c6/a18789b17138bc4f3001bfee42c07f85b9432475f5e8188c5699d481a376/boto3-1.35.49.tar.gz"
-    sha256 "ddecb27f5699ca9f97711c52b6c0652c2e63bf6c2bfbc13b819b4f523b4d30ff"
+    url "https://files.pythonhosted.org/packages/24/e9/52e1db9abfc9ebd1ce8d7a0600f74b226c0b243e78def2b5d59ff8efe594/boto3-1.35.54.tar.gz"
+    sha256 "7d9c359bbbc858a60b51c86328db813353c8bd1940212cdbd0a7da835291c2e1"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/16/c3/20c4d7df35b7a93a4999c881beaf38dbf91fd7c82c28d876c3cdd0959fe3/botocore-1.35.49.tar.gz"
-    sha256 "07d0c1325fdbfa49a4a054413dbdeab0a6030449b2aa66099241af2dac48afd8"
+    url "https://files.pythonhosted.org/packages/71/56/5eacd3dcecdbc36cb5695676c165430282f83cb86ffa75a1a65c34c084c5/botocore-1.35.54.tar.gz"
+    sha256 "131bb59ce59c8a939b31e8e647242d70cf11d32d4529fa4dca01feea1e891a76"
   end
 
   resource "click" do
@@ -49,8 +49,8 @@ class StsmfaCli < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/d9/e9/cf9ef5245d835065e6673781dbd4b8911d352fb770d56cf0879cf11b7ee1/rich-13.9.3.tar.gz"
-    sha256 "bc1e01b899537598cf02579d2b9f4a415104d3fc439313a7a2c165d76557a08e"
+    url "https://files.pythonhosted.org/packages/ab/3a/0316b28d0761c6734d6bc14e770d85506c986c85ffb239e688eeaab2c2bc/rich-13.9.4.tar.gz"
+    sha256 "439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098"
   end
 
   resource "s3transfer" do
