@@ -3,19 +3,19 @@ class StsmfaCli < Formula
 
   desc "A small CLI to help with creating AWS profile for MFA protected sessions."
   homepage "https://github.com/browniebroke/stsmfa-cli"
-  url "https://files.pythonhosted.org/packages/14/2d/0d174824a246592e3548fc708fa08ff5e71ee5ff05cf21eead877d9ea5f2/stsmfa_cli-1.4.3.tar.gz"
-  sha256 "afa60c697616e511069fa66015386f0080fb550f06ff130eafe71cdc60b65a69"
+  url "https://files.pythonhosted.org/packages/c5/91/2e75e12d06a1bf39f97aa4eb29d623d4b33b4cc21379f0b2439c46156c03/stsmfa_cli-1.4.4.tar.gz"
+  sha256 "4251cac63abe472667827f8fc4b74fbf33c1a040636114a16ef0c851a3829296"
 
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/93/73/b3871afc8fd5c65dc43517474894ee74040f2c578b5f06e54d19ee8db94b/boto3-1.35.68.tar.gz"
-    sha256 "091d6bed1422370987a839bff3f8755df7404fc15e9fac2a48e8505356f07433"
+    url "https://files.pythonhosted.org/packages/4b/53/760bd45ee11aaf3b4c0eb7548d153b045c10cad9912ca3bb5c4395596237/boto3-1.35.72.tar.gz"
+    sha256 "f9fc94413a959c388b1654c6687a5193293f3c69f8d0af3b86fd48b4096a23f3"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/f8/5d/a26f56d44685fb6f321228400f3f400492cbca0e5df7548995099e13c73e/botocore-1.35.68.tar.gz"
-    sha256 "42c3700583a82f2b5316281a073d644a521d6358837e2b446dc458ba5d990fb4"
+    url "https://files.pythonhosted.org/packages/15/59/62bdffdfa472acde76179fbb1f62aef94406c0e682c47113542a596529bb/botocore-1.35.72.tar.gz"
+    sha256 "6b5fac38ef7cfdbc7781a751e0f78833ccb9149ba815bc238b1dbb75c90fbae5"
   end
 
   resource "click" do
@@ -69,8 +69,8 @@ class StsmfaCli < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/76/41/49ead3ad3310545e767bcb917c759b026ca9eada5d5c150c2fb6fc555568/typer-0.13.1.tar.gz"
-    sha256 "9d444cb96cc268ce6f8b94e13b4335084cef4c079998a9f4851a90229a3bd25c"
+    url "https://files.pythonhosted.org/packages/0d/7e/24af5b9aaa0872f9f6dc5dcf789dc3e57ceb23b4c570b852cd4db0d98f14/typer-0.14.0.tar.gz"
+    sha256 "af58f737f8d0c0c37b9f955a6d39000b9ff97813afcbeef56af5e37cf743b45a"
   end
 
   resource "typing-extensions" do
