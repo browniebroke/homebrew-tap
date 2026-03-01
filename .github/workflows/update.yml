@@ -35,7 +35,7 @@ jobs:
           | sed 's@    false@    ${{ matrix.formula.test }}@g' \
           > Formula/${{ matrix.formula.name }}.rb
       - run: cat Formula/${{ matrix.formula.name }}.rb
-      - uses: peter-evans/create-pull-request@v5
+      - uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: update/formula/${{ matrix.formula.name }}
