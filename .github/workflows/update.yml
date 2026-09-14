@@ -23,17 +23,19 @@ jobs:
     name: Update ${{ matrix.formula.name }}
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v10.1.0
-        with:
-          python-version: "3.14"
+      - uses: Homebrew/actions/setup-homebrew@master
       - run: |
-          uvx --from homebrew-pypi-poet \
-          --with 'setuptools<81' \
-          --with ${{ matrix.formula.name }} \
-          poet -f ${{ matrix.formula.name }} \
-          | sed 's@Shiny new formula@${{ matrix.formula.description }}@g' \
+          PYTHON_PACKAGE_SOURCE_URL=$(curl --silent --show-error "https://pypi.org/pypi/${{ matrix.formula.name }}/json" \
+          | jq -r '.urls[] | select(.packagetype == "sdist") | .url')
+          test -n "${PYTHON_PACKAGE_SOURCE_URL}"
+          touch /tmp/generated-formula-marker
+          brew create --python --set-name "${{ matrix.formula.name }}" "${PYTHON_PACKAGE_SOURCE_URL}"
+          GENERATED_FORMULA_PATH=$(find . -maxdepth 1 -name '*.rb' -newer /tmp/generated-formula-marker -print -quit)
+          test -n "${GENERATED_FORMULA_PATH}"
+          sed 's@Shiny new formula@${{ matrix.formula.description }}@g' "${GENERATED_FORMULA_PATH}" \
           | sed 's@    false@    ${{ matrix.formula.test }}@g' \
           > Formula/${{ matrix.formula.name }}.rb
+          rm -f /tmp/generated-formula-marker "${GENERATED_FORMULA_PATH}"
       - run: cat Formula/${{ matrix.formula.name }}.rb
       - uses: peter-evans/create-pull-request@v8
         with:
