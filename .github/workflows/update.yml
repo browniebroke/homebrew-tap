@@ -24,6 +24,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: true
       - run: |
           PYTHON_PACKAGE_SOURCE_URL=$(curl --silent --show-error "https://pypi.org/pypi/${{ matrix.formula.name }}/json" \
           | jq -r '.urls[] | select(.packagetype == "sdist") | .url')
