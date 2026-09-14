@@ -23,13 +23,13 @@ jobs:
     name: Update ${{ matrix.formula.name }}
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - uses: astral-sh/setup-uv@v10
         with:
-          python-version: 3.12
+          python-version: "3.12"
       - run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install homebrew-pypi-poet ${{ matrix.formula.name }}
+          uvx --from homebrew-pypi-poet \
+          --with 'setuptools<81' \
+          --with ${{ matrix.formula.name }} \
           poet -f ${{ matrix.formula.name }} \
           | sed 's@Shiny new formula@${{ matrix.formula.description }}@g' \
           | sed 's@    false@    ${{ matrix.formula.test }}@g' \
