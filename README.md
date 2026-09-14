@@ -11,4 +11,4 @@ Homebrew formulaes for some of my CLI tools
 
 ## Add or update formulaes
 
-- Python CLIs: use Homebrew built-ins (`brew create --python` and `brew update-python-resources`) from the official guide: https://docs.brew.sh/Python-for-Formula-Authors
+- Python CLIs: https://til.simonwillison.net/homebrew/packaging-python-cli-for-homebrew
