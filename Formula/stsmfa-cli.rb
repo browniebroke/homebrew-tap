@@ -3,8 +3,8 @@ class StsmfaCli < Formula
 
   desc "A small CLI to help with creating AWS profile for MFA protected sessions."
   homepage "None"
-  url "https://files.pythonhosted.org/packages/81/0b/c0041640cff31ec29880d7e03904216d7ff8ce6fbb26d09ae791a37a03e0/stsmfa_cli-1.8.0.tar.gz"
-  sha256 "f6a4883e921b593be095a22d1ba94ac233e7348d48090780f1ecf3a4db8cc2ed"
+  url "https://files.pythonhosted.org/packages/21/3d/34b90b54ad16ad3c117b491a2972ccfb20a207b72267e0671b54a7cd090a/stsmfa_cli-2.0.0.tar.gz"
+  sha256 "4a5393ff427a2392fa2c62dd067857ce1981ad930c24a5b4c30cf58ccec862e4"
 
   depends_on "python3"
 
@@ -14,13 +14,13 @@ class StsmfaCli < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/fc/8a/64b46f075149f9160da44aa7e1052dd18431b9ad4435beb0cfb02cc48624/boto3-1.43.123.tar.gz"
-    sha256 "055fabb990c5d2f31fce4ca569255bd640cdd11a3ca68c9ecad35f4f8a5b83b5"
+    url "https://files.pythonhosted.org/packages/c8/0a/e4f8bc0cfa5822cacfd01d7be0e991faa3405440248d7db338efe11b6daa/boto3-1.43.126.tar.gz"
+    sha256 "5fda4a3dd2782c134a01d1678911962c2860dd8de8cd10bef168ba1507b371a9"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/e0/de/011fc2a47fb066c47064b122498d2fd21f55bc90ea514acbddc37ca0f8c1/botocore-1.43.123.tar.gz"
-    sha256 "80948cb9b1cdf1a1a25809089a42e3a1bc4af0258d198222db6e97dcc660dd0c"
+    url "https://files.pythonhosted.org/packages/69/3d/c76e2be7d71ed9e47d5b27f735443fca7bdbb330bae3c8da88fd19846495/botocore-1.43.126.tar.gz"
+    sha256 "96996af07d8b703c3cdf44863f69c0b4b8b2d1cb6976c641986ced3e38c072f3"
   end
 
   resource "jmespath" do
@@ -69,8 +69,8 @@ class StsmfaCli < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/03/51/d33db42cc72ffd8c30777547b42d01f0cbf9d95a770457698d0174b3ed71/typer-0.27.3.tar.gz"
-    sha256 "d0396f770a560ab1b0a8504e13b5f254b728cedb05c61cf0359e944e50ce8901"
+    url "https://files.pythonhosted.org/packages/ad/8f/21021859316f44289101638dc74d82e13d722d8533e4b8708a3ab7c8461a/typer-0.28.0.tar.gz"
+    sha256 "69ab84ef79fd601cff071bbd2566d855ecadfd93adbc4b3360b9924359bdd857"
   end
 
   resource "urllib3" do
